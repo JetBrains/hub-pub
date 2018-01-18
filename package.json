@@ -1,0 +1,30 @@
+{
+  "name": "@jetbrains/hub-pub",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {
+    "archiver": "2.1.1",
+    "form-data": "2.3.1",
+    "kotlin": "1.2.20"
+  },
+  "files": [
+    "js/src"
+  ],
+  "main": "js/src/index.kt.js",
+  "bin": {
+    "hub-pub": "js/src/index.kt.js"
+  },
+  "devDependencies": {
+    "kotlin-test": "1.2.20",
+    "mocha": "^4.0.1"
+  },
+  "scripts": {
+    "start": "./gradlew run",
+    "build": "./gradlew compileKotlin2Js",
+    "publish": "npm run build && npm publish",
+    "watch": "./gradlew run --continuous",
+    "test": "./gradlew runTest"
+  },
+  "author": "",
+  "license": "Apache-2.0"
+}

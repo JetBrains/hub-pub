@@ -1,0 +1,44 @@
+buildscript {
+    ext.kotlin_version = "1.2.20"
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: "kotlin2js"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version"
+}
+
+compileKotlin2Js.kotlinOptions.outputFile = "${projectDir}/js/src/index.kt.js"
+compileTestKotlin2Js.kotlinOptions.outputFile = "${projectDir}/js/test/index_test.kt.js"
+
+[compileKotlin2Js, compileTestKotlin2Js]*.configure {
+    kotlinOptions.moduleKind = "commonjs"
+    kotlinOptions.sourceMap = true
+}
+
+sourceSets {
+    main.kotlin.srcDirs += "src"
+    test.kotlin.srcDirs += "test"
+    test.kotlin.srcDirs += main.kotlin.srcDirs
+}
+
+task run(type: Exec, dependsOn: [compileKotlin2Js]) {
+    executable("node")
+    args("${compileKotlin2Js.outputFile}")
+}
+
+task runTest(type: Exec, dependsOn: [compileTestKotlin2Js]) {
+    executable("./node_modules/.bin/mocha")
+    args("${compileTestKotlin2Js.outputFile}")
+}
