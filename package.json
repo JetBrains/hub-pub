@@ -1,6 +1,6 @@
 {
   "name": "@jetbrains/hub-pub",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "dependencies": {
     "archiver": "2.1.1",
@@ -8,11 +8,12 @@
     "kotlin": "1.2.20"
   },
   "files": [
-    "js/src"
+    "js/src",
+    "bin"
   ],
   "main": "js/src/index.kt.js",
   "bin": {
-    "hub-pub": "js/src/index.kt.js"
+    "hub-pub": "bin/hub-pub"
   },
   "devDependencies": {
     "kotlin-test": "1.2.20",

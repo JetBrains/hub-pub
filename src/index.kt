@@ -1,7 +1,6 @@
-import node.module
 import node.process
 
 fun main(args: Array<String>) {
-    if (module.parent != null) return
+    if (process.env.NODE_ENV != "production") return
     parseArguments(process.argv.drop(2))
 }
