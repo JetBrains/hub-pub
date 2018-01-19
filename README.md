@@ -6,9 +6,9 @@ This package allows to upload a plugin to JetBrains Plugin Repository
 # How to use
 
 
-The simplest way to use is install the latest version form [npm](https://www.npmjs.com/package/hub-pub):
+The simplest way to use is install the latest version form [npm](https://www.npmjs.com/package/@jetbrains/hub-pub):
 ```shell
-npm install -g hub-pub
+npm install -g @jetbrains/hub-pub
 ```
 
 ## Usage
