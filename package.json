@@ -22,7 +22,7 @@
   "scripts": {
     "start": "./gradlew run",
     "build": "./gradlew compileKotlin2Js",
-    "publish": "npm run build && npm publish",
+    "pub": "npm run build && npm publish",
     "watch": "./gradlew run --continuous",
     "test": "./gradlew runTest"
   },
