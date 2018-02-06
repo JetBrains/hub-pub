@@ -6,7 +6,7 @@ fun printUsage() {
             Usage: $program [<options>] <command> [<param1>, <param2>...]
 
             where <command> is one of:
-                publish, pack
+                publish, pack, version
 
             --pluginId         Numeric ID of the plugin, can be retrieved from the plugin repository URL
             --userName         Plugin author username used to access the JetBrains Plugin Repository (JetBrains Account username or email)

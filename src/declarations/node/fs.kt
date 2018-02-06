@@ -4,7 +4,7 @@ package node
 external object fs {
     fun existsSync(path: String): Boolean
     fun lstatSync(path: String): Stats
-    fun createWriteStream(path: String)
+    fun createWriteStream(path: String): dynamic
     fun createReadStream(path: String)
 }
 

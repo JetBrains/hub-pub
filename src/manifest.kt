@@ -1,0 +1,1 @@
+val manifestFile = "manifest.json"

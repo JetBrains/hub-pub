@@ -4,8 +4,6 @@ import node.path
 import kotlin.js.Promise
 
 fun pack(dir: String): Promise<String> {
-    val manifestFile = "manifest.json"
-
     if (!fs.existsSync(dir)) {
         throw Error("$dir does not exist")
     }

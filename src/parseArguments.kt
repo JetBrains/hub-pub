@@ -50,6 +50,10 @@ fun parseArguments(args: List<String>) {
             publish(other.get(1), params).then { console.log("Done") }
             return
         }
+        "version" -> {
+            version(other.get(1))
+            return
+        }
         else -> printUsage()
     }
 }
