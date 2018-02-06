@@ -1,6 +1,6 @@
 {
   "name": "@jetbrains/hub-pub",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "dependencies": {
     "archiver": "2.1.1",
