@@ -28,6 +28,10 @@ channel | is a release channel the update is published to (empty channel means d
 hub-pub pack <plugin directory>
 ```
 
+```
+hub-pub version <plugin version>
+```
+
 
 <div align="center">
     <img src="./kotlin.svg" width="28">
