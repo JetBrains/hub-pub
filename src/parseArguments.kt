@@ -43,7 +43,7 @@ fun parseArguments(args: List<String>) {
 
     when (other.first()) {
         "pack" -> {
-            pack(other.get(1)).then { archive -> console.log(archive) }
+            pack(other.get(1), params).then { archive -> console.log(archive) }
             return
         }
         "publish" -> {

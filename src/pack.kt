@@ -1,9 +1,9 @@
 import node.fs
-import node.os
 import node.path
+import node.process
 import kotlin.js.Promise
 
-fun pack(dir: String): Promise<String> {
+fun pack(dir: String, params: HashMap<String, String> = HashMap()): Promise<String> {
     if (!fs.existsSync(dir)) {
         throw Error("$dir does not exist")
     }
@@ -12,6 +12,7 @@ fun pack(dir: String): Promise<String> {
         throw Error("$program not being able to find a $manifestFile in $dir you are trying to pack")
     }
 
-    val archive = path.resolve(os.tmpdir(), path.basename(dir) + ".zip")
+    val outDir = params.get("out-dir") ?: process.cwd()
+    val archive = params.get("out") ?: path.resolve(outDir, path.basename(dir) + ".zip")
     return zip(dir, archive).then({ archive })
 }
