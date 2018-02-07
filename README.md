@@ -30,7 +30,7 @@ hub-pub pack <plugin directory>
 
 Options | Description
 --- | :---
-out | Generate the output into <file>. If not specified, the output goes in a file named <plugin directory name>.zip
+out | Generate the output into `<file>`. If not specified, the output goes in a file named `<plugin directory name>.zip`
 
 ```
 hub-pub version <plugin version>
