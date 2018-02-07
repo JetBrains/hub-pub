@@ -36,6 +36,10 @@ out | Generate the output into `<file>`. If not specified, the output goes in a 
 hub-pub version <plugin version>
 ```
 
+Options | Description
+--- | :---
+prefix | Directory which contains a manifest.json file
+
 
 <div align="center">
     <img src="./kotlin.svg" width="28">

@@ -51,7 +51,7 @@ fun parseArguments(args: List<String>) {
             return
         }
         "version" -> {
-            version(other.get(1))
+            version(other.get(1), params)
             return
         }
         else -> printUsage()
