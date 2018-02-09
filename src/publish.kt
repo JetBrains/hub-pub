@@ -1,5 +1,4 @@
 import node.fs
-import node.os
 import kotlin.js.Promise
 
 fun publish(file: String, params: HashMap<String, String>): Promise<Int> {
@@ -11,7 +10,5 @@ fun publish(file: String, params: HashMap<String, String>): Promise<Int> {
         return upload(file, params)
     }
 
-    val packParams: HashMap<String, String> = HashMap()
-    packParams["out-dir"] = os.tmpdir()
-    return pack(file, packParams).then({ archive -> publish(archive, params) }).then({ it })
+    return pack(file, params).then({ archive -> publish(archive, params) }).then({ it })
 }
