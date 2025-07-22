@@ -4,7 +4,7 @@
   "description": "",
   "dependencies": {
     "archiver": "2.1.1",
-    "form-data": "2.3.1",
+    "form-data": "2.5.5",
     "kotlin": "1.2.20"
   },
   "files": [
